@@ -27,7 +27,7 @@ const nextPage = () => {
 
 <style lang="postcss" scoped>
 .pagination {
-  @apply flex justify-center gap-4;
+  @apply flex justify-center gap-4 bg-slate-900 opacity-80;
   .action {
     @apply rounded-md bg-slate-100 p-2 font-medium text-slate-700 shadow-md hover:bg-slate-200 disabled:text-slate-400 hover:disabled:bg-slate-100;
   }

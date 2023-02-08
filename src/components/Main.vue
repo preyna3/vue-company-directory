@@ -8,7 +8,7 @@ import MainPagination from './MainPagination.vue'
   <div class="wrapper">
     <MainSearch />
     <MainCards />
-    <MainPagination />
+    <MainPagination v-show="true" style="position: fixed; bottom: 0; right: 0; width: 100%" md-mode="indeterminate" />
   </div>
 </template>
 
