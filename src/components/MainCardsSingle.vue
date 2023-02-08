@@ -1,9 +1,11 @@
 <script setup>
 import { faker } from '@faker-js/faker'
 
-const firstName = faker.name.firstName()
-const lastName = faker.name.lastName()
+const person = faker
+const firstName = person.name.firstName()
+const lastName = person.name.lastName()
 const fullName = `${firstName} ${lastName}`
+const Photos = faker.internet.avatar()
 
 const selectCard = () => {
   console.log(`${fullName} selected`)
