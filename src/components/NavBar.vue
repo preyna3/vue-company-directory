@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from 'vue'
-import { useAuth } from './composables/useAuth'
+import { useAuth } from '@/composables/useAuth'
 
-const { isAuthenticated } = useAuth()
+const { isAuthenticated, logout } = useAuth()
 
 const brand = ref('🦈 MegaByte Computer Company Directory')
 </script>
@@ -17,7 +17,7 @@ const brand = ref('🦈 MegaByte Computer Company Directory')
         <RouterLink :to="{ name: 'Home' }" href="#" class="menu-item">Departments</RouterLink>
         <div v-if="isAuthenticated">
           <RouterLink :to="{ name: 'Home' }" href="#" class="menu-item">Settings</RouterLink>
-          <RouterLink :to="{ name: 'Home' }" href="#" class="menu-logout">Logout</RouterLink>
+          <button href="#" class="menu-logout" @click="logout">Logout</button>
         </div>
         <div v-else>
           <RouterLink :to="{ name: 'Login' }" href="#" class="menu-login">Login</RouterLink>
