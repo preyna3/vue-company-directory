@@ -1,14 +1,19 @@
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
 import { useAuth } from '@/composables/useAuth'
-const { login, logout, isAuthenticated } = useAuth()
+const { login, logout } = useAuth()
+const router = useRouter()
 
 const username = ref('')
 const password = ref('')
 
 const logUserIn = () => {
   if (login(username.value, password.value)) {
-    console.log('logged in')
+    router.push({ name: 'Home' })
+  } else {
+    logout()
   }
 }
 </script>

@@ -14,7 +14,6 @@ const brand = ref('🦈 MegaByte Computer Company Directory')
         <span class="brand-title">{{ brand }}</span>
       </RouterLink>
       <div class="menu">
-        <RouterLink :to="{ name: 'Home' }" href="#" class="menu-item">Departments</RouterLink>
         <div v-if="isAuthenticated">
           <RouterLink :to="{ name: 'Home' }" href="#" class="menu-item">Settings</RouterLink>
           <button href="#" class="menu-logout" @click="logout">Logout</button>
