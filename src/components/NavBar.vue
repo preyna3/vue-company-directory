@@ -21,7 +21,7 @@ const brand = ref('🦈 MegaByte Computer Company Directory')
               ><i>{{ user.name }}</i></strong
             ></i
           >
-          <RouterLink :to="{ name: 'Home' }" href="#" class="menu-item">Settings</RouterLink>
+          <RouterLink :to="{ name: 'Settings' }" href="#" class="menu-item">Settings</RouterLink>
           <button href="#" class="menu-logout" @click="logout">Logout</button>
         </div>
         <div v-else>
