@@ -18,7 +18,7 @@ const brand = ref(import.meta.env.VITE_APP_NAME)
           <i v-show="isAuthenticated" class="px-2 py-4"
             >Welcome back
             <strong
-              ><i>{{ user.name }}</i></strong
+              ><i>{{ user?.email }}</i></strong
             ></i
           >
           <RouterLink :to="{ name: 'Settings' }" href="#" class="menu-item">Settings</RouterLink>
