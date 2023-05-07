@@ -1,16 +1,17 @@
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted } from "vue";
 
-import MainSearch from '@/components/MainSearch.vue'
-import MainCards from '@/components/MainCards.vue'
-import MainPagination from '@/components/MainPagination.vue'
+import MainSearch from "@/components/MainSearch.vue";
+import MainCards from "@/components/MainCards.vue";
+import MainPagination from "@/components/MainPagination.vue";
 
-import useAPI from '@/composables/useAPI'
+import useAPI from "./composables/useAPI";
 
-const { getEmployees, loading } = useAPI()
+const { getEmployees, loading } = useAPI();
+
 onMounted(async () => {
-  await getEmployees()
-})
+  await getEmployees();
+});
 </script>
 
 <template>
@@ -18,7 +19,11 @@ onMounted(async () => {
   <div v-else class="wrapper">
     <MainSearch />
     <MainCards />
-    <MainPagination v-show="true" style="position: fixed; bottom: 0; right: 0; width: 100%" md-mode="indeterminate" />
+    <MainPagination
+      v-show="true"
+      style="position: fixed; bottom: 0; right: 0; width: 100%"
+      md-mode="indeterminate"
+    />
   </div>
 </template>
 
